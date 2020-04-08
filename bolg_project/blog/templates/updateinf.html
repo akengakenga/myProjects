@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% load staticfiles %}
+<center>
+<h2>修改个人信息</h2>
+<form action="/updateinf/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% load staticfiles %}
+    <input type="hidden" name="id" value="{{ user.user_id }}">
+    <p>用户名:<input type="text" name="uname" value="{{ user.user_name }}"></p>
+    <p>头像:（不选默认不修改）<img src="{% static avatar %}"height="50px" width="50px"><input type="file" name="avatar" value="{{ user.user_name }}"></p>
+    <p>邮箱:<input type="email" name="email" value="{{ uinf.uinf_email }}"></p>
+    <p>手机:<input type="text" name="mobile" value="{{ uinf.uinf_mobile }}"></p>
+    <p>个人博客地址:<input type="url" name="url" value="{{ uinf.uinf_url }}"></p>
+    <p>个性签名:<input type="text" name="sign" value="{{ uinf.uinf_sign }}"></p>
+    <p>
+        <input type="submit" value="修改" >
+        <input type="reset" value="重置" >
+    </p>
+    <a href="/inf/?uid={{ user.user_id }}">返回</a>
+</form>
+</center>
+</body>
+</html>

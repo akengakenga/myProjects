@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div  style="width:900px;margin: 0 auto;background-color: lightgrey">
+    <h2 style="text-align: center">{{ article.art_title }}</h2>
+    <p style="text-align: center">作者：{{ article.user.user_name }}</p>
+    <div style="margin-left: 20px">
+        <pre>{{ article.art_content }}</pre>
+    </div>
+</div>
+<center>
+    <a style="text-align: center" href="/article/?uid={{ uid }}" >返回</a>
+</center>
+</body>
+</html>

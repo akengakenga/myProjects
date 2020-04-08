@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+</head>
+<body>
+{% load staticfiles %}
+<center>
+    <h2>用户信息</h2>
+    <table border="2">
+        <tr>
+            <td>
+                用户名
+            </td>
+             <td>
+                {{ user.user_name }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                头像
+            </td>
+            <td>
+                <img src="{% static avatar %}" height="50px" width="50px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                性别
+            </td>
+            <td>
+                {{ uinf.uinf_sex }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                邮箱
+            </td>
+            <td>
+                {{ uinf.uinf_email }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                手机
+            </td>
+            <td>
+                {{ uinf.uinf_mobile }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                个人博客地址
+            </td>
+            <td>
+               {{ uinf.uinf_url }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                个性签名
+            </td>
+            <td>
+                {{ uinf.uinf_sign }}
+            </td>
+        </tr>
+    </table>
+    <p><a href="/updateinf/?userid={{ user.user_id }}">编辑</a>   &nbsp; <a href="/index/?userid={{ user.user_id }}">返回</a></p>
+</center>
+</body>
+</html>

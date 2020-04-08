@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ProClinic-医院管理系统Bootstrap4前端框架</title>
+	<!-- Fav  Icon Link -->
+	<link rel="shortcut icon" type="image/png" href="/../static/images/fav.png">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="/../static/css/bootstrap.min.css">
+	<!-- themify icons CSS -->
+	<link rel="stylesheet" href="/../static/css/themify-icons.css">
+	<!-- Animations CSS -->
+	<link rel="stylesheet" href="/../static/css/animate.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="/../static/css/styles.css">
+	<link rel="stylesheet" href="/../static/css/green.css" id="style_theme">
+	<link rel="stylesheet" href="/../static/css/responsive.css">
+	<!-- morris charts -->
+	<link rel="stylesheet" href="/../static/charts/css/morris.css">
+	<!-- jvectormap -->
+	<link rel="stylesheet" href="/../static/css/jquery-jvectormap.css">
+	<link rel="stylesheet" href="/../static/datatable/dataTables.bootstrap4.min.css">
+
+	<script src="/../static/js/modernizr.min.js"></script>
+</head>
+
+<body>
+	<!-- Pre Loader -->
+	<div class="loading">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
+	</div>
+	<!--/Pre Loader -->
+	<!-- Color Changer -->
+	<div class="theme-settings" id="switcher">
+		<span class="theme-click">
+			<span class="ti-settings"></span>
+		</span>
+		<span class="theme-color theme-default theme-active" data-color="green"></span>
+		<span class="theme-color theme-blue" data-color="blue"></span>
+		<span class="theme-color theme-red" data-color="red"></span>
+		<span class="theme-color theme-violet" data-color="violet"></span>
+		<span class="theme-color theme-yellow" data-color="yellow"></span>
+	</div>
+	<!-- /Color Changer -->
+	<div class="wrapper">
+		<!-- Page Content -->
+		<div id="content">
+				<!-- Top Navigation -->
+				<div class="container top-brand">
+					<nav class="navbar navbar-default">			
+						<div class="navbar-header">
+							<div class="sidebar-header"> <a href="index.html"><img src="/../static/images/logo-dark.png" class="logo" alt="logo"></a>
+							</div>
+						</div>
+						<ul class="nav justify-content-end">
+						<li><span style="font-size: 18px">欢迎您：{{ request.session.user_name }}！</span></li>&nbsp;&nbsp;
+						<li><span ><a style="text-decoration: underline" href="{% url 'president:logout' %}">注销</a></span></li>
+					</ul>
+				
+					</nav>
+				</div>
+				<!-- /Top Navigation -->
+				<!-- Menu -->
+				<div class="container menu-nav">
+					<nav class="navbar navbar-expand-lg lochana-bg text-white">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+						 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="ti-menu text-white"></span>
+						</button>
+				
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-home"></span> 控制面板</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="{% url 'president:toindex' %}">统计</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-wheelchair"></span> 病人管理</a>
+								<div class="dropdown-menu">
+										<a class="dropdown-item" href="{% url 'patient:addpatient' %}">添加病人信息</a>
+										<a class="dropdown-item" href="{% url 'patient:showpatient' %}">查看病人信息</a>
+									</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-user"></span> 医生管理</a>
+								<div class="dropdown-menu">
+										<a class="dropdown-item" href="{% url 'doctor:adddoctor' %}">添加医生信息</a>
+										<a class="dropdown-item" href="{% url 'doctor:showdoctor' %}">查询医生信息</a>
+                                </div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-pencil-alt"></span> 出诊管理</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="{% url 'treat:addtreat' %}">添加出诊信息</a>
+									<a class="dropdown-item" href="{% url 'treat:showtreat' %}">查询出诊信息</a>
+
+                    </div></li>
+                    {#{#							<li class="nav-item dropdown">#}
+                    {#{#								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"#}
+                    {#{#								 aria-expanded="false"><span class="ti-money"></span> 支付管理</a>#}
+                    {#{#								<div class="dropdown-menu">#}
+{#									<a class="dropdown-item" href="add-payment.html">添加支付</a>#}
+{#									<a class="dropdown-item" href="payments.html">所有支付</a>#}
+{#									<a class="dropdown-item" href="about-payment.html">发票</a>#}
+{#								</div>#}
+{#							</li>#}
+							<li class="nav-item dropdown active">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-key"></span> 病房管理</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="{% url 'ward:addward' %}">添加病房</a>
+									<a class="dropdown-item" href="{% url 'ward:showward' %}">查询病房信息</a>
+								</div>
+							</li>
+{#							<li class="nav-item dropdown">#}
+{#								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"#}
+{#								 aria-expanded="false"><span class="ti-layout-tab"></span> UI框架</a>#}
+{#								<div class="dropdown-menu">#}
+{#									<a class="dropdown-item" href="typography.html">排版</a>#}
+{#									<a class="dropdown-item" href="buttons.html">按钮</a>#}
+{#									<a class="dropdown-item" href="cards.html">卡片</a>#}
+{#									<a class="dropdown-item" href="tabs.html">选项卡</a>#}
+{#									<a class="dropdown-item" href="accordions.html">手风琴</a>#}
+{#									<a class="dropdown-item" href="modals.html">模态窗口</a>#}
+{#									<a class="dropdown-item" href="lists.html">媒体和列表</a>#}
+{#									<a class="dropdown-item" href="grid.html">网格</a>#}
+{#									<a class="dropdown-item" href="progress-bars.html">进度条</a>#}
+{#									<a class="dropdown-item" href="notifications-alerts.html">预警和提示</a>#}
+{#									<a class="dropdown-item" href="pagination.html">分页</a>#}
+{#									<a class="dropdown-item" href="carousel.html">滑块</a>#}
+{#									<a class="dropdown-item" href="tables.html">表格</a>#}
+{#									<a class="dropdown-item" href="charts-1.html">Morris图表</a>#}
+{#									<a class="dropdown-item" href="charts-2.html">Flot图表</a>#}
+{#									<a class="dropdown-item" href="map-1.html">谷歌地图</a>#}
+{#									<a class="dropdown-item" href="map-2.html">Vector地图</a>#}
+{#									<a class="dropdown-item" href="forms.html">表单</a>#}
+{#									<a class="dropdown-item" href="font-awesome.html">Font Awesome </a>#}
+{#									<a class="dropdown-item" href="themify.html">Themify图标</a>#}
+{#								</div>#}
+{#							</li>#}
+{#							<li class="nav-item dropdown">#}
+{#								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"#}
+{#								 aria-expanded="false"><span class="ti-file"></span> 其它页面</a>#}
+{#								<div class="dropdown-menu">#}
+{#									<a class="dropdown-item" href="login.html">登录</a>#}
+{#									<a class="dropdown-item" href="sign-up.html">注册</a>#}
+{#									<a class="dropdown-item" href="404.html">404</a>#}
+{#									<a class="dropdown-item" href="blank-page.html">空白页</a>#}
+{#									<a class="dropdown-item" href="pricing.html">价格表</a>#}
+{#									<a class="dropdown-item" href="faq.html">FAQ</a>#}
+{#									<a class="dropdown-item" href="invoice.html">发票</a>#}
+{#								</div>#}
+{#							</li>#}
+						</ul>
+						</div>
+					</nav>
+				</div>
+				<!-- /Menu -->
+				<!-- Breadcrumb -->
+				<!-- Page Title -->
+				<div class="container mt-0">
+					<div class="row breadcrumb-bar">
+						<div class="col-md-6">
+							<h3 class="block-title">添加病房</h3>
+						</div>
+						<div class="col-md-6">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="index.html">
+										<span class="ti-home"></span>
+									</a>
+								</li>
+								<li class="breadcrumb-item">病房管理</li>
+								<li class="breadcrumb-item active">添加病房</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			<!-- /Page Title -->
+
+			<!-- /Breadcrumb -->
+			<!-- Main Content -->
+			<div class="container">
+
+				<div class="row">
+					<!-- Widget Item -->
+					<div class="col-md-12">
+						<div class="widget-area-2 lochana-box-shadow">
+							<h3 class="widget-title">添加病房</h3>
+                        <div class="form-group col-md-6 mb-3">
+                                <span style="color: red">{{ msg }}</span>
+                            </div>
+							<form action="{% url 'ward:addward' %}" method="post">
+                            {% csrf_token %}
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="room-number">病房名称</label>
+										<input type="text" value="{{ room_name }}" class="form-control" name="room_name" placeholder="病房名称" id="room-number">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="room-type">病房类型</label>
+										<select class="form-control" name="room_type" id="room-type">
+                                            {% for type in roomtypes %}
+											    <option value="{{ type.type_id }}">{{type.type_name}}</option>
+                                            {% endfor %}
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="patient-name">病房容纳人数</label>
+										<input type="number" value="{{ room_captcity }}" placeholder="病房容纳人数" name="room_capacity" class="form-control" id="patient-name">
+									</div>
+                                    <div class="form-group col-md-6 mb-3"></div>
+									<div class="form-group col-md-6 mb-3">
+										<input type="submit" class="btn btn-primary btn-lg" value="添加">
+									</div>
+
+								</div>
+							</form>
+							<!-- Alerts-->
+
+							<!-- /Alerts-->
+						</div>
+					</div>
+					<!-- /Widget Item -->
+				</div>
+			</div>
+			<!-- /Main Content -->
+			<!--Copy Rights-->
+			<div class="container">
+				<div class="d-sm-flex justify-content-center">
+				  <span class="text-muted text-center d-block d-sm-inline-block">Copyright © 2018 <a href="#" target="_blank">konnectcode</a>. All rights reserved.</span> 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+				</div>
+			</div>
+			<!-- /Copy Rights-->
+		</div>
+		<!-- /Page Content -->
+	</div>
+	<!-- Back to Top -->
+	<a id="back-to-top" href="#" class="back-to-top">
+		<span class="ti-angle-up"></span>
+	</a>
+	<!-- /Back to Top -->
+	<!-- Jquery Library-->
+	<script src="/../static/js/jquery-3.2.1.min.js"></script>
+	<!-- Popper Library-->
+	<script src="/../static/js/popper.min.js"></script>
+	<!-- Bootstrap Library-->
+    <script src="/../static/js/bootstrap.min.js"></script>
+    
+    <!-- Datatable  -->
+	<script src="/../static/datatable/jquery.dataTables.min.js"></script>
+	<script src="/../static/datatable/dataTables.bootstrap4.min.js"></script>
+    
+	<!-- Custom Script-->
+	<script src="/../static/js/custom.js"></script>
+
+</body>
+
+</html>

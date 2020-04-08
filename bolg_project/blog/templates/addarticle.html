@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body >
+<form action="/addarticle/" method="post">
+
+    {% csrf_token %}
+    <div class="form" style="margin-bottom: 20px ">
+        <div style="float: left">
+            <span>标题：</span>
+        </div>
+        <div>
+            {{ form.art_title }}
+        </div>
+    </div>
+    <div>
+        <span>{{ form.errors.art_title.0 }}</span>
+    </div>
+    <div class="form">
+        <div style="float: left">
+            <span>正文：</span>
+        </div>
+        <div>
+            {{ form.art_content }}
+        </div>
+    </div>
+    <div>
+        <span>{{ form.art_content.errors }}</span>
+    </div>
+    <div style="margin-left: 80px;margin-top: 20px">
+        <input type="hidden" name="uid" value="{{ user.user_id }}">
+        <input type="submit" value="添加">
+        <input type="reset" value="重置" >
+    </div
+</form>
+<div style="margin: 20px 100px">
+    <a href="/index/">返回</a>
+</div>
+</body>
+</html>

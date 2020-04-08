@@ -1,0 +1,490 @@
+<!DOCTYPE html><!--/*技术支持，小庄602842076     验证：商城技术支持*/
+/*技术支持，小庄602842076    验证：商城技术支持*/
+/*技术支持，小庄602842076    验证：商城技术支持*/
+/*技术支持，小庄602842076    验证：商城技术支持*/
+/*技术支持，小庄602842076    验证：商城技术支持*/
+/*https://shop116998991.taobao.com/*/
+/*https://shop116998991.taobao.com/*/
+/*https://shop116998991.taobao.com/*/-->
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="user-scalable=no">
+    
+    <meta name="google-site-verification" content="BstJA3X9z6f9HcvoN9AZTwaKo_9Abj_j7dVBPfy640s" />
+    <meta name="baidu-site-verification" content="IYCrtVH0i1" />
+    <meta property="wb:webmaster" content="239d3d1dbdde1b2c" />
+    <link rel="icon" type="image/png" href="../static/images/favicon.ico"/>
+    
+    <script type="text/javascript">
+        
+        (function(document, screen) {if (screen.width < 760) {document.location.href="/mobile/";}}(document, screen));
+    </script>
+    
+    <link rel="stylesheet" href="../static/css/common.css?v=2015-5-20"/>
+    
+    <style type="text/css">
+        .content{color:#333;}
+        .jobs-img{text-align:center;}
+        h2.jobs-title{font-size:24px;padding-bottom:15px;margin:0;font-weight:normal;color: #666;border-bottom: 1px solid #e5e5e5;}
+        .jobs-title span{color:#999;margin-left:10px;font-size:20px;}
+        .jobs-left{width:160px;padding-top:14px;}
+        .jobs-left li{height:46px;line-height:46px;cursor:pointer;color:#666;font-size:16px;background:url("/media/jobs/s.png") 24px -37px no-repeat;border-bottom: 1px solid #e5e5e5;padding-left:50px;}
+        .jobs-left li.cur{background-position:24px 17px;background-color: #f3bb00;color:#fff;border-bottom: none;}
+        .jobs-right{width:635px;padding-left:50px;} 
+        .jobs-list h3{font-size:16px;font-weight: normal;margin-top:30px;padding-left: 10px;border-left:4px solid #f4ba00;line-height:1;}   
+        .jobs-list h4{padding:34px 0 6px 14px;font-size:12px;}
+        .jobs-list ul{padding-left:14px;}
+        .jobs-list li{padding-top:4px;color:#666;line-height:2;font-size:12px;}
+        p.jobs-btn{color:#e18450;padding-left:14px;font-size:12px;}
+        .hide{display:none;}
+</style>
+
+    <!--[if lte IE 7]><script>window.onload=function(){location.href="/ie6warning/"}</script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <script>
+        var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video, dh-dialog, dh-checkbox".split(', ');
+         var i= e.length;while (i--){document.createElement(e[i])}
+    </script>
+    <![endif]-->
+    <title>人才招聘</title>
+</head>
+<body class="day " ng-controller="bodyCtrl"  day-or-night>
+    <section class="common-back" id="wrapBackground">
+        
+            <header id="header">
+                <div class="common-width clearfix">
+                    <h1 class="fl">
+                        <a class="logo base-logo" href="index.html">外卖超人</a>
+                    </h1>
+                    
+                        <ul class="member" login-box>
+                            <li><a href="index.html" class="index">首页</a></li>
+                            <li class="login-register"><a href="/account/login/" referer-url  class="login"  rel="nofollow">登录</a><span class="cg">/</span><a href="/account/register/" referer-url  rel="nofollow" class="register">注册</a></li>
+                            <li><a href="/account/center/orders/" class="order-center"  rel="nofollow">查看订单</a></li>
+                            <li class=""><a href="/account/gift/center/"  rel="nofollow">氪星礼品站</a></li>
+                            <li class="phone-client "><a href="/app/"  rel="nofollow" target="_blank"><span>手机客户端</span></a></li>
+                        </ul>
+                    
+                </div>
+            </header>
+        
+        <div id="main-box">
+             <!--二维码-->
+            <div class="qrCode-frame" ng-hide="qrCodeStatus">
+                <img src="../static/images/wx.png" alt="扫描二维码" />
+                <em ng-click="qrCodeStatus=true">X</em>
+            </div>
+        
+            <div ng-controller="colorAction">
+                <div class="dayColor_two"></div>
+                <div class="dayColor_one"></div>
+                <div class="dayColor_three" ng-class="{dayColor_threeActive:threeActive}"></div>
+            </div>
+        
+            
+    <div class="footer-location-page common-width">
+
+        <div class="content">
+            <p class="jobs-img"><img src="../static/images/staff.jpg" alt="外卖超人招聘"/></p>
+            <h2 class="jobs-title">
+                招聘职位<span>Jobs</span>
+            </h2>
+            <div class="jobs-box clearfix" ng-controller="Tabs">
+                <ul class="jobs-left fl">
+                    <li ng-class="{cur: seah1}" ng-click="tabAction(1)"><a href="javascript:;" title="技术部">技术部</a></li>
+                    <li ng-class="{cur: seah2}" ng-click="tabAction(2)"><a href="javascript:;" title="销售部">销售部</a></li>
+                    <li ng-class="{cur: seah3}" ng-click="tabAction(3)"><a href="javascript:;" title="客服部">客服部</a></li>
+                    <li ng-class="{cur: seah4}" ng-click="tabAction(4)"><a href="javascript:;" title="市场部">市场部</a></li>
+                    <li ng-class="{cur: seah5}" ng-click="tabAction(5)"><a href="javascript:;" title="产品部">产品部</a></li>
+                </ul>
+                <div class="jobs-right fl">
+                    <!--技术部-->
+                    <div ng-class="{hide: !seah1}">
+                        <div class="jobs-list">
+                            <h3>Python工程师</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.3-5年Python开发经验；</li>
+                                <li>2.熟悉WSGI规范, 深刻理解MVC模式, 有web项目开发经验；</li>
+                                <li>3.了解Reactor模式，了解一种具体的Reactor实现(不限于twisted, tornado, gevent, node.js)；</li>
+                                <li>4.熟悉至少一种Sql数据库。</li>
+                            </ul>
+                            <h4>加分：</h4>
+                            <ul>
+                                <li>1.对Linux系统有深入了解；</li>
+                                <li>2.熟悉Web服务器如Nginx的配置；</li>
+                                <li>3.了解基本的前端技术，HTML, CSS，JS；</li>
+                                <li>4.了解golang。</li>
+                            </ul>
+                            <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                        <div class="jobs-list">
+                            <h3>Web server架构师</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.5年以上Python开发经验，熟悉Web Server架构，具有5年以上Web Server开发经验，3年以上互联网软件设计、分析、架构经验；</li>
+                                <li>2.熟悉WSGI规范, 深刻理解MVC模式, 有web项目开发经验；</li>
+                                <li>3.了解Reactor模式, 了解一种具体的Reactor实现(不限于twisted, tornado, gevent, node.js)；</li>
+                                <li>4.熟悉至少一种Sql数据库。</li>
+                            </ul>
+                            <h4>加分：</h4>
+                            <ul>
+                                <li>1.对Linux系统有深入了解；</li>
+                                <li>2.熟悉Web服务器如Nginx的配置；</li>
+                                <li>3.了解基本的前端技术，HTML, CSS，JS；</li>
+                                <li>4.了解golang。</li>
+                            </ul>
+                            <p  class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                        <!-- <div class="jobs-list">
+                            <h3>Web前端开发工程师</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.依据产品需求完成高质量的Web前端开发和维护；</li>
+                                <li>2.对具体的产品进行性能优化，实现极致的Web加载、执行和渲染时间；</li>
+                                <li>3.在理解前端开发流程的基础上，结合前端实际建立或优化提升工作效率的工具；</li>
+                                <li>4.在理解产品业务的基础上，结合前端技术建立或优化Web的交互方式。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.2-5年Web前端开发开发经验；</li>
+                                <li>2.熟练应用JQuery、AngularJS等前端框架，有自己开发过JS框架经验者优先；</li>
+                                <li>3.精通web前端技术，包括HTML、XML、CSS、Javascript、Ajax等开发技术；</li>
+                                <li>4.对目前互联网流行的网页制作方法（Web2.0）DIV+CSS，以及各大浏览器兼容性有很大的了解，对前沿技术（HTML5+CSS3）的基本掌握，具备移动平台的HTML5开发经验者尤佳；</li>
+                                <li>5.对用户体验、交互操作流程、及用户需求有一定理解，对前端开发有浓厚兴趣；</li>
+                                <li>6.良好的团队合作精神、较好的沟通能力、高度的责任感，能够根据需求，分析并给出最优的前端技术解决方案。</li>
+                            </ul>
+                             <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div> -->
+                    </div>
+                    <!--销售部-->
+                    <div ng-class="{hide: !seah2}">
+                        <div class="jobs-list">
+                            <h3>区域拓展</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.负责开拓片区内的合作餐厅，进行商务洽谈，对所负责区域的合作餐厅数量负责；</li>
+                                <li>2.负责片区餐厅的运营推广及商户关系维护（包括：行销物件的供给、区域活动策划及地推执行、收集一线市场信息），对负责区域的订单量负责；</li>
+                                <li>3.负责区域推广兼职人员的管理及雇用。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.超高的团队意识及创业精神；</li>
+                                <li>2.吃苦耐劳，坚韧不拔，富有激情；</li>
+                                <li>3.对人坦诚，良好的判断力及沟通能力；</li>
+                                <li>4.男性优先；</li>
+                                <li>5.该职位接受靠谱踏实的应届毕业生。</li>
+                            </ul>
+                            <h4>福利待遇：</h4>
+                            <ul>
+                                <li>1.最具竞争力的薪资——挑战年薪8-10万；</li>
+                                <li>2.良好的福利待遇——五险一金+绩效奖金+交通补贴+带薪假期；</li>
+                                <li>3.充分的成长空间——团队交流+自主空间；</li>
+                                <li>4.广阔的晋升平台——公司处于快速发展期，在上海的基础上不断开拓新区域，所有管理人员均由内部选拔。</li>
+                                <li>5.底薪3000+补贴+提成，另公司发展迅速，会陆续开通新城市，有机会调到新城市做城市经理。</li>
+                            </ul>
+                            <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                        <div class="jobs-list">
+                            <h3>市场活动策划专员</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.根据公司销售活动的预设目标，完成市场活动的策划（月度、季度）并监督执行；</li>
+                                <li>2.提供活动所需的所有文案资料，并撰写活动策划书；</li>
+                                <li>3.负责整合活动、专题的各项数据指标，进行行业分析，并提交相关数据报告及整改，优化建议。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.大专以上学历，2年以上活动策划和现场管理工作经验；</li>
+                                <li>2.熟知市场营销、活动策划等概念及相关知识，对线下活动的执行、统筹有深刻认识及丰富实操经验；</li>
+                                <li>3.具备良好的文字功底和独立提案能力，能根据中心的要求独立完成活动方案的策划和撰写；</li>
+                                <li>4.丰富的大型活动执行经验，优秀的组织能力和应变能力，能对独立执行活动方案和控制整个活动流程，协调活动计划和进程，有良好的执行资源。</li>
+                            </ul>
+                             <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                    </div>
+                    <!--客服部-->
+                    <div ng-class="{hide: !seah3}">
+                        <div class="jobs-list">
+                            <h3>客服代表</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.接听和外呼客服部热线电话，为客户（消费者和餐厅）提供满意服务；</li>
+                                <li>2.对来电做详细记录：催单、咨询、投诉和商务合作；</li>
+                                <li>3.及时受理客人投诉，安抚客人情绪；</li>
+                                <li>4.在规定时间内完成订单的核实确认、变更、取消、查询；</li>
+                                <li>5.配合高级客服、菜单组随时完善餐厅菜品和其他信息的变更；</li>
+                                <li>6.接受部门的培训、考核和监督；</li>
+                                <li>7.完成部门经理分配的相应工作，并积极主动的跟进工作。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.有客服、呼叫中心或餐饮业工作经验者优先；</li>
+                                <li>2.普通话标准，英语客服口语能基本交流；</li>
+                                <li>3.熟练使用电脑及办公软件；</li>
+                                <li>4.思维敏捷，性格温和，有耐心，有较好的语言表达能力和敬业精神。</li>
+                            </ul>
+                             <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                    </div>
+                    <!--end 客服部-->
+                    <!--市场部-->
+                    <div ng-class="{hide: !seah4}">
+                        <div class="jobs-list">
+                            <h3>媒介/公关策划主管</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.选择并建立维护媒体渠道，与广泛的门户、财经类、本地生活媒介保持良好的合作关系；</li>
+                                <li>2.策划、撰写各种活动、事件、稿件，通过媒体传播，提升公司品牌知名度及影响力；</li>
+                                <li>3.通过自媒体，微博、微信等向已有客户传播产品价值，提升客户粘性和回头率；</li>
+                                <li>4.策划各类线上、线下推广活动；</li>
+                                <li>5.品牌推广相关其他工作及上级安排的其他工作。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.公共关系、市场营销、媒体、广告学、新闻等相关专业，本科及以上学历；</li>
+                                <li>2.有丰富的公关经验及资源，有实际运作成功案例，有事件策划经验；</li>
+                                <li>3.具有2年以上相关工作经验，在互联网公司并担任过媒介专员者优先；</li>
+                                <li>4.年龄23岁～30岁，男女不限；</li>
+                                <li>5.形象佳，懂商务礼仪。</li>
+                            </ul>
+                             <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                        <div class="jobs-list">
+                            <h3>数据分析师</h3>
+                            <h4>岗位职责：</h4>
+                            <ul>
+                                <li>1.负责产品和运营数据分析与数据挖掘的分析体系的构建；</li>
+                                <li>2.负责用户调研、及用户行为分析等数据商业价值挖掘工作。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.本科（含）以上学历，计算机、统计学、应用数学相关专业优先考虑，有互联网行业或市场调查经验者优先；</li>
+                                <li>2.有较扎实的统计学基础；熟悉各类统计分析方法，例如：回归、因子、聚类、关联以及决策树等；</li>
+                                <li>3.2年以上数据分析经验，1年以上互联网数据分析经验；</li>
+                                <li>4.擅长沟通，具有高度的责任感和团队合作精神。</li>
+                            </ul>
+                            <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                        <div class="jobs-list">
+                            <h3>品牌推广</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.负责公司产品的品牌建立、推广，使之具有市场影响力；</li>
+                                <li>2.设计并组织实施市场营销方案，加强市场营销的有效度，获取更多的用户，促进公司整体业绩的完成。</li>
+                            </ul>
+                            <h4>岗位职责：</h4>
+                            <ul>
+                                <li>1.根据公司的战略和方针，制定品牌营销策略并监督实施；</li>
+                                <li>2.制定品牌战略规划，进行有效的品牌传播，促进公司的战略发展，维持保证公司正面品牌形象；</li>
+                                <li>3.制定品牌产品在线上线下推广的详细实施计划，根据公司决策，组织资源，开展品牌推广工作；</li>
+                                <li>4.根据公司品牌推广目标，规范品牌营销流程，对公司产品品牌知名度、流量、转化率负责；</li>
+                                <li>5.根据公司市场营销需要，管理并拓展优质渠道及媒体，进行资源整合，为整体品牌建设提供服务；</li>
+                                <li>6.负责推广营销工作，包括推广内容策划及执行计划等，并对推广及活动的各环节进行效果跟踪、分析与改善；</li>
+                                <li>7.利用主流统计分析工具对网站营销数据进行深入分析，对每个项目运营情况进行评估，并进行优化；</li>
+                                <li>8.从营销和客户需求的角度，对产品的研发提供指导性建议；</li>
+                                <li>9.负责公司品牌产品在线上线下推广，有效的提升公司品牌产品的市场知名度，维持保证公司正面品牌形象；</li>
+                                <li>10.规划全年、季度性会员互动活动，提升公司产品口碑及受众的互动。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.本科及以上学历；市场营销相关专业优先，5年及以上互联网相关行业品牌营销工作经验；</li>
+                                <li>2.具有全面品牌产品线的成功营销推广经验，产品品牌建设实战经验丰富；</li>
+                                <li>3.具有丰富的线上活动策划和品牌推广经验，有短期内实现用户大量增长的成功推广案例；</li>
+                                <li>4.熟悉互联网行业，熟悉各种网站推广渠道与推广手段，深度了解社会化推广传播模式；</li>
+                                <li>5.有成功的推广经验和良好的互联网资源，项目及数据分析把控能力强；</li>
+                                <li>6.文笔能力强，拥有独立撰写并执行推广企划方案的能力；</li>
+                                <li>7.具备较强的团队领导力和执行力，带领团队开展推广营销工作，有较强的团队凝聚力。</li>
+                            </ul>
+                             <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                    </div>
+                    <!--end 市场部-->
+                    <!--设计部-->
+                    <div  ng-class="{hide: !seah5}">
+                        <div class="jobs-list">
+                            <h3>交互设计师</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.负责研究用户行为，以用户理解成本最低的方式进行产品交互的设计；</li>
+                                <li>2.负责公司产品的用户界面的交互设计以及持续的优化和改进，提出最佳的交互设计和界面设计方案；</li>
+                                <li>3.负责与视觉设计师沟通，协助视觉设计师输出符合规范和产品需求的产品界面设计稿；</li>
+                                <li>4.负责与前端工程师沟通，确保前端代码符合设计规范，符合交互逻辑；</li>
+                                <li>5.负责管理产品的体验，跟踪产品的体验效果数据，提出改进方案，持续改善产品的用户体验。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.两年以上互联网UED经验，熟悉网站与移动端交互设计流程；</li>
+                                <li>2.有较好逻辑思维能力，能够通俗、清晰、流畅的撰写文稿；</li>
+                                <li>3.熟练使用Axure、Visio等原型设计工具及常用办公软件，较强的文档撰写能力，可以独立完成整个设计过程；</li>
+                                <li>4.熟练使用Photoshop、Flash、Illustrator等软件者优先；</li>
+                                <li>5.有较强的敬业精神，责任心及良好的沟通能力和团队合作精神，具有较强的学习能力和洞察力；</li>
+                                <li>6.对互联网新技术、新产品有强烈的好奇心。</li>
+                            </ul>
+                             <p class="jobs-btn">请发送简历至：<a href="mailto:waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                        <div class="jobs-list">
+                            <h3>产品经理APP方向</h3>
+                            <h4>职位描述：</h4>
+                            <ul>
+                                <li>1.熟悉O2O网站产品和电子商务市场产品整体实现过程，负责公司产品的全过程产品管理运营，包括用户群体及定位分析，产品需求分析及管理，产品设计和产品原型开发；</li>
+                                <li>2.协调推动研发和设计团队完成产品开发上线，保证进度和质量；</li>
+                                <li>3.持续跟进和迭代产品，优化产品体验；</li>
+                                <li>4.负责跨部门协调和沟通，推动和UI、开发、运营等人员紧密合作达成产品目标，并给予运营策略支持和引导。</li>
+                            </ul>
+                            <h4>任职要求：</h4>
+                            <ul>
+                                <li>1.3年App设计经验，有一个从零开始完成一个App的经验，懂交互经验者优先；</li>
+                                <li>2.对电子商务或者移动互联网产品有深刻理解；</li>
+                                <li>3.理解需求分析、交互设计和用户体验，能够独立完成产品界面原型和产品需求文档，有良好的文档能力并能很好的沟通和传达自己的观点；</li>
+                                <li>4.较强的数据分析能力和数据意识，善于通过数据来发现问题和机会；</li>
+                                <li>5.有强烈的责任感和积极乐观的工作态度，对自己负责的产品、对公司有强烈的归属意识；</li>
+                                <li>简历请附上App产品下载链接。</li>
+                            </ul>
+                             <p class="jobs-btn">请发送简历至：<a href="mailto:jobs@waimaichaoren.com" title="外卖超人邮箱地址">jobs@waimaichaoren.com</a></p>
+                        </div>
+                    </div>
+                    <!--end 设计部-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    
+        <footer id="footer">
+        <div class="footer-first gray">
+            <div class="company-info clearfix fs14 gray">
+                <a href="/about_us/" target="_blank"  rel="nofollow">关于我们</a>
+                <a href="/help/" target="_blank"  rel="nofollow">帮助中心</a>
+                <a href="/terms-and-conditions/" target="_blank"  rel="nofollow">法律声明</a>
+                <a href="/jobs/" target="_blank"  rel="nofollow">人才招聘</a>
+                <a href="/contact/" target="_blank"  rel="nofollow">联系我们</a>
+                <a href="javascript:;" user-feedback ng-click="userFeedback=true" class="last" rel="nofollow">意见反馈</a>
+                <a href="/restaurant/list/shanghai/1/" class="last" target="_blank" style="display:none">上海餐厅导航</a>
+            </div>
+        </div>
+        <div class="footer-last">
+            <a target="_blank" class="foot-logo-1 base-logo" href="index.html"></a>
+            <div class="tc fs14 light-gray mb10">
+              ©2014 waimaichaoren.com All Rights Reserved - 沪ICP备11019908号
+            </div>
+        </div>
+    </footer>
+    
+    
+    <dh-dialog class="disnone" height="500" feeedbackclass="userFeedback" type="user-feedback" header="意见反馈" show="userFeedback">
+        <div ng-controller="feedbackCtrl">
+            <form novalidate="true" name="feedbackForm" class="inline">
+                <div class="form-group row mb10">
+                    <label class="col-3">联系方式：</label>
+                    <div class="col-8">
+                        <input type="text" maxlength="20" name="userContact" required ng-focus="userContactFocus()" ng-class="{error:feedback.phoneMessage}" placeholder="请输入您的手机号码" ng-model="feedback.userContact"/>
+                    </div>
+                </div>
+                <div class="row mb10">
+                    <div class="clo-8 col-offset-3" ng-if="feedback.phoneMessage">
+                        <span class="vaildate-error">联系方式不能为空</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-3 vt">反馈信息：</label>
+                    <div class="col-8">
+                        <textarea name="feedbackMessage"  placeholder="可以说说您对外卖超人的意见" ng-focus="feedbacFocus()" required ng-class="{error:feedback.feedbackMessageTip}" ng-model="feedback.feedbackMessage" maxlength="300" cols="25" rows="7"></textarea>
+                    </div>
+                </div>
+                <div class="row mb10">
+                    <div class="clo-8 col-offset-3" ng-if="feedback.feedbackMessageTip">
+                        <span class="vaildate-error">反馈信息不能为空</span>
+                    </div>
+                </div>
+                <div class="tc">
+                    <button class="btn normal-btn btn-success" ng-click="feedbackSubmit()">确认</button>
+                    <button class="btn normal-btn btn-cancel" ng-click="feedbackCancel()">取消</button>
+                </div>
+            </form>
+        </div>
+        <div class="common-dialog-footer">
+            咨询加QQ群：337212031
+        </div>
+    </dh-dialog>
+    
+     <ul class="site-fixed">
+        <li class="scroll-top"><img src="../static/images/scroll_top1.png" alt=""/> </li>
+        <li class="scorll-feekback" ng-click="userFeedback=true">
+            <img src="../static/images/scorll_feekback.png" alt=""/>
+            <div>意见反馈</div>
+        </li>
+        <li class="scroll-wx">
+            <img src="../static/images/scroll_wx.png" alt=""/>
+             <div><img src="../static/images/wx.png" alt=""/></div>
+        </li>
+    </ul>
+    
+    <script type="text/javascript" src="../static/js/angular.min.js"></script>
+    <script src="../static/js/common.js"></script>
+    
+     
+    <script src="../static/js/service.js"></script>
+    
+    <script>var feedbackUrl = '/ajax/feedback/';var app = angular.module("app", ["dh.dialog", "dh.form", 'dh.service', 'dh.other']);</script>
+    <!--[if lt IE 9]><script src="js/fix.js"></script><![endif]-->
+    
+    
+    <script>
+        app.controller('bodyCtrl',function(){});
+        function Tabs($scope) {
+            $scope.seah1 = true;
+            $scope.tabAction = function(type) {
+                $scope.seah1 = false;
+                $scope.seah2 = false;
+                $scope.seah3 = false;
+                $scope.seah4 = false;
+                $scope.seah5 = false;
+                $scope['seah' + type] = true;
+            }
+
+        }
+    </script>
+
+    
+    <script>angular.bootstrap(document, ["app"]);</script>
+
+    <!-- Baidu Analytics -->
+
+<!-- End Baidu Tracking Code -->
+
+<!-- Baidu Remarketing code -->
+<script type="text/javascript">
+<!--
+(function (d) {
+window.bd_cpro_rtid="rHDzrHT";
+var s = d.createElement("script");s.type = "text/javascript";s.async = true;s.src = location.protocol + "//cpro.baidu.com/cpro/ui/rt.js";
+var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
+})(document);
+//-->
+</script>
+<!-- End Baidu Remarketing code -->
+
+<!-- Google Analytics Code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-33138478-1', 'waimaichaoren.com');
+  ga('send', 'pageview');
+  ga('require', 'ecommerce', 'ecommerce.js');
+</script>
+<!-- End Google Analytics Code -->
+
+
+</body>
+</html>
